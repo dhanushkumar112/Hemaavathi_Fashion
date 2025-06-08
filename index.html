@@ -9,6 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
@@ -24,6 +28,30 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header .title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    header .title img {
+      height: 50px;
+    }
+
+    header .title span {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffd700;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 0.5rem;
     }
 
     nav a {
@@ -77,10 +105,17 @@
       padding: 1rem;
     }
 
-    .social-icons img {
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .social-icons a img {
       width: 30px;
-      margin: 0 10px;
-      cursor: pointer;
+      height: 30px;
+      filter: brightness(0) invert(1);
     }
 
     .social-icons img:hover {
@@ -116,12 +151,31 @@
       border-radius: 4px;
       white-space: nowrap;
     }
+
+    @media screen and (max-width: 768px) {
+      header, nav {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero {
+        padding: 1rem;
+      }
+      .floating-button {
+        right: 10px;
+      }
+      footer {
+        font-size: 0.9rem;
+      }
+    }
   </style>
 </head>
 
 <body>
   <header>
-    <div><img src="logo.png" alt="Hemaavathi Logo" height="40"> Hemaavathi Fashions</div>
+    <div class="title">
+      <img src="logo.png" alt="Hemaavathi Logo">
+      <span>Hemaavathi Fashions</span>
+    </div>
     <nav>
       <a href="#home">Home</a>
       <a href="#about">About</a>
@@ -170,9 +224,9 @@
 
   <footer>
     <div class="social-icons">
-      <a href="https://www.instagram.com/hemaavathi__fashions?igsh=MThidXh4aHRjYW5lZw%3D%3D&utm_source=qr" target="_blank"><img src="instagram.png" alt="Instagram"></a>
-      <a href="https://www.facebook.com/share/167a5Bk4gp/?mibextid=wwXIfr" target="_blank"><img src="facebook.png" alt="Facebook"></a>
-      <a href="https://www.youtube.com/@Hemaavathifashions" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+      <a href="https://www.instagram.com/hemaavathi__fashions?igsh=MThidXh4aHRjYW5lZw%3D%3D&utm_source=qr" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"></a>
+      <a href="https://www.facebook.com/share/167a5Bk4gp/?mibextid=wwXIfr" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"></a>
+      <a href="https://www.youtube.com/@Hemaavathifashions" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" alt="YouTube"></a>
     </div>
     <p>© 2025 Hemaavathi Fashions. All rights reserved.</p>
   </footer>
