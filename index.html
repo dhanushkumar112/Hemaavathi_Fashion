@@ -1,301 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hemaavathi Fashions</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
-      color: #222;
+      background-color: #fdfdfd;
+      color: #333;
     }
 
     header {
-      background-color: #003366;
+      background-color: #1e3a8a;
       color: white;
       padding: 1rem;
-      text-align: center;
-    }
-
-    .logo-nav {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      height: 60px;
-      width: auto;
-    }
-
-    nav {
-      margin-top: 0.5rem;
     }
 
     nav a {
-      margin: 0 1rem;
       color: white;
+      margin: 0 1rem;
       text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
+      font-weight: 500;
     }
 
     nav a:hover {
-      color: #ffcc00;
+      color: #ffd700;
     }
 
     .hero {
-      background-color: #e6f0ff;
-      padding: 2rem;
+      background-color: #e0e7ff;
       text-align: center;
+      padding: 2rem;
     }
 
-    .hero .btn {
-      display: inline-block;
-      margin: 1rem 1rem 0;
-      padding: 0.7rem 1.5rem;
-      background-color: #003366;
+    .hero button {
+      background-color: #1e3a8a;
       color: white;
-      text-decoration: none;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      margin: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
       border-radius: 5px;
-      transition: 0.3s ease;
     }
 
-    .hero .btn:hover {
-      background-color: #0055aa;
-      box-shadow: 0 0 10px #0055aa;
-      transform: scale(1.05);
+    .hero button:hover {
+      background-color: #3749b5;
     }
 
     section {
       padding: 2rem;
-      max-width: 800px;
-      margin: auto;
     }
 
-    section h3 {
-      color: #003366;
+    h2 {
+      color: #1e3a8a;
     }
 
-    ul {
-      list-style-type: square;
-      padding-left: 1.5rem;
-    }
-
-    a {
-      color: #003366;
-      text-decoration: none;
-      transition: 0.3s ease;
-    }
-
-    a:hover {
-      color: #ff6600;
-      text-decoration: underline;
-    }
-
-    .social-icons {
-      margin-top: 0.5rem;
-    }
-
-    .social-icons a {
-      margin: 0 10px;
-      color: #003366;
-      font-size: 1.5rem;
-      transition: color 0.3s ease;
-    }
-
-    .social-icons a:hover {
-      color: #ff6600;
+    .services div {
+      margin: 1rem 0;
     }
 
     footer {
-      background-color: #003366;
+      background-color: #1e3a8a;
       color: white;
       text-align: center;
       padding: 1rem;
     }
 
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn 2s ease forwards;
+    .social-icons img {
+      width: 30px;
+      margin: 0 10px;
+      cursor: pointer;
     }
 
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
+    .social-icons img:hover {
+      opacity: 0.7;
     }
 
-    .slide-in {
-      opacity: 0;
-      transform: translateY(50px);
-      animation: slideUp 1.5s ease forwards;
-    }
-
-    @keyframes slideUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .whatsapp-float {
+    .floating-button {
       position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 90px;
+      bottom: 80px;
       right: 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 30px;
-      z-index: 1000;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .whatsapp-float:hover {
-      background-color: #1ebc5d;
-    }
-
-    .tooltip {
-      position: relative;
-    }
-
-    .tooltip::after {
-      content: 'Chat with us';
-      position: absolute;
-      bottom: 70px;
-      background: black;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 5px;
-      opacity: 0;
-      white-space: nowrap;
-      transition: opacity 0.3s;
-    }
-
-    .tooltip:hover::after {
-      opacity: 1;
-    }
-
-    .floating-buttons {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
       z-index: 999;
     }
 
-    .floating-buttons a {
-      padding: 10px;
-      background: #003366;
+    .floating-button a {
+      display: block;
+      margin-bottom: 10px;
+      background-color: #25d366;
       color: white;
-      border-radius: 25px;
+      padding: 10px;
+      border-radius: 50%;
       text-align: center;
-      font-size: 14px;
       text-decoration: none;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      font-size: 24px;
     }
 
-    .floating-buttons a:hover {
-      background-color: #0055aa;
+    .floating-button a:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      right: 60px;
+      background: #000;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 4px;
+      white-space: nowrap;
     }
   </style>
 </head>
-<body>
 
+<body>
   <header>
-    <div class="logo-nav">
-      <img src="logo.png" alt="Hemaavathi Fashions Logo" class="logo" />
-      <h1 class="fade-in">Hemaavathi Fashions</h1>
-    </div>
+    <div><img src="logo.png" alt="Hemaavathi Logo" height="40"> Hemaavathi Fashions</div>
     <nav>
-      <a href="#">Home</a>
+      <a href="#home">Home</a>
       <a href="#about">About</a>
-      <a href="#products">Products</a>
+      <a href="#services">Products</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="hero fade-in">
-    <h2>Discover Traditional Elegance</h2>
+  <section class="hero" id="home">
+    <h1>Discover Traditional Elegance</h1>
     <p>Welcome to Hemaavathi Fashions – your one-stop destination for premium Sarees, Dress Materials, KidsWear, Handlooms, and more.</p>
-    <div class="buttons">
-      <a href="#products" class="btn">Shop Now</a>
-      <a href="https://maps.app.goo.gl/n5HD1Q3gdGd8jiJs5" class="btn" target="_blank">Visit Us</a>
-    </div>
+    <button onclick="document.getElementById('services').scrollIntoView()">Shop Now</button>
+    <button onclick="window.open('https://maps.app.goo.gl/n5HD1Q3gdGd8jiJs5', '_blank')">Visit Us</button>
   </section>
 
-  <section id="about" class="fade-in">
-    <h3>About Us</h3>
+  <section id="about">
+    <h2>About Us</h2>
     <p>Hemaavathi Fashions is located in Kadiri and offers a wide range of traditional and modern fashion. Our collections are curated with love to dress every woman, man, and child beautifully for every occasion.</p>
   </section>
 
-  <section id="products" class="slide-in">
-    <h3>What We Offer</h3>
-    <ul>
-      <li>Sarees Collection</li>
-      <li>Dress Materials</li>
-      <li>KidsWear</li>
-      <li>Handloom Specials</li>
-      <li>Men's Traditional Wear</li>
-    </ul>
+  <section id="services">
+    <h2>What We Offer</h2>
+    <div class="services">
+      <div>Sarees Collection</div>
+      <div>Dress Materials</div>
+      <div>KidsWear</div>
+      <div>Handloom Specials</div>
+      <div>Men's Traditional Wear</div>
+    </div>
   </section>
 
-  <section id="contact" class="fade-in">
-    <h3>Contact Us</h3>
-    <p><strong>Phone:</strong> 📞 9492324225 / 9490481708</p>
-    <p><strong>Email:</strong> <a href="mailto:hemaavathifashions@gmail.com">hemaavathifashions@gmail.com</a></p>
-    <p><strong>WhatsApp:</strong> <a href="https://wa.me/919492324225" target="_blank">Chat with us on WhatsApp</a></p>
-    <p><strong>Address:</strong> <a href="https://maps.app.goo.gl/n5HD1Q3gdGd8jiJs5" target="_blank"><i class="fas fa-map-marker-alt"></i> Madanapalli Road, Kadiri – 515591</a></p>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>📞 9492324225 / 9490481708</p>
+    <p>📧 <a href="mailto:hemaavathifashions@gmail.com">hemaavathifashions@gmail.com</a></p>
+    <p>📍 <a href="https://maps.app.goo.gl/n5HD1Q3gdGd8jiJs5" target="_blank">Madanapalli Road, Kadiri – 515591</a></p>
+    <p>💬 <a href="https://wa.me/919492324225" target="_blank">Message us on WhatsApp</a></p>
 
-    <p><strong>Follow Us:</strong></p>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/hemaavathi__fashions?igsh=MThidXh4aHRjYW5lZw%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com/share/167a5Bk4gp/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://www.youtube.com/@Hemaavathifashions" target="_blank"><i class="fab fa-youtube"></i></a>
-    </div>
-
-    <h4>Leave a Suggestion:</h4>
-    <form action="mailto:hemaavathifashions@gmail.com" method="post" enctype="text/plain">
-      <textarea name="suggestion" rows="4" cols="50" placeholder="Enter your suggestion here..."></textarea><br />
-      <input type="submit" value="Send" />
+    <h3>Leave a Suggestion</h3>
+    <form onsubmit="return sendToWhatsApp()">
+      <textarea id="suggestion" placeholder="Type your suggestion here..." rows="4" style="width: 100%;"></textarea>
+      <br><br>
+      <button type="submit">Send Suggestion</button>
     </form>
   </section>
 
   <footer>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/hemaavathi__fashions?igsh=MThidXh4aHRjYW5lZw%3D%3D&utm_source=qr" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+      <a href="https://www.facebook.com/share/167a5Bk4gp/?mibextid=wwXIfr" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+      <a href="https://www.youtube.com/@Hemaavathifashions" target="_blank"><img src="youtube.png" alt="YouTube"></a>
+    </div>
     <p>© 2025 Hemaavathi Fashions. All rights reserved.</p>
   </footer>
 
-  <!-- Floating Buttons -->
-  <div class="floating-buttons">
-    <a href="tel:9492324225">📞 Call Now</a>
-    <a href="https://maps.app.goo.gl/n5HD1Q3gdGd8jiJs5" target="_blank">📍 Directions</a>
+  <div class="floating-button">
+    <a href="https://wa.me/919492324225" target="_blank" data-tooltip="Chat with us">💬</a>
+    <a href="tel:9492324225" data-tooltip="Call Now">📞</a>
+    <a href="https://maps.app.goo.gl/n5HD1Q3gdGd8jiJs5" target="_blank" data-tooltip="Directions">📍</a>
   </div>
 
-  <!-- Floating WhatsApp -->
-  <a href="https://wa.me/919492324225" class="whatsapp-float tooltip" target="_blank" title="Chat with us">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
+  <script>
+    function sendToWhatsApp() {
+      const suggestion = document.getElementById('suggestion').value;
+      if (!suggestion) {
+        alert('Please enter a suggestion.');
+        return false;
+      }
+      const url = `https://wa.me/919492324225?text=${encodeURIComponent('Suggestion: ' + suggestion)}`;
+      window.open(url, '_blank');
+      return false;
+    }
+  </script>
 </body>
+
 </html>
