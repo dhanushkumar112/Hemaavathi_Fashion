@@ -1,105 +1,48 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hemaavathi Fashions</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hemaavathi Fashions – Traditional Sarees, Dresses, and Handlooms in Kadiri">
+    <title>Hemaavathi Fashions</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header>
-    <div class="logo-nav">
-      <img src="logo.png" alt="Hemaavathi Fashions" class="logo" />
-      <h1 class="site-title">Hemaavathi Fashions</h1>
-    </div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#about">About</a>
-      <a href="#products">Products</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <header>
+        <h1>Hemaavathi Fashions</h1>
+        <p>Where Elegance Meets Tradition</p>
+    </header>
 
-  <section class="hero">
-    <h1>Discover Traditional Elegance</h1>
-    <p>Welcome to Hemaavathi Fashions – your one-stop destination for premium Sarees, Dress Materials, KidsWear, Handlooms, and more.</p>
-    <a href="#products" class="btn">Shop Now</a>
-    <a href="https://maps.app.goo.gl/n5HD1Q3gdGd8jiJs5" class="btn">Visit Us</a>
-  </section>
+    <section class="products">
+        <h2>Our Collections</h2>
+        <div class="product-grid">
+            <div class="product-card">Sarees (Image Coming Soon)</div>
+            <div class="product-card">Dresses (Image Coming Soon)</div>
+            <div class="product-card">Kidswear (Image Coming Soon)</div>
+            <div class="product-card">Men's Wear (Image Coming Soon)</div>
+        </div>
+    </section>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Hemaavathi Fashions is located in Kadiri and offers a wide range of traditional and modern fashion. Our collections are curated with love to dress every woman, man, and child beautifully for every occasion.</p>
-  </section>
+    <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-carousel">
+            <p>“Very good collection at affordable prices.. 👍👍 recommended 👌” – Maddi Jithendra</p>
+            <p>“Good, I am satisfied to my needs” – Rahul K</p>
+            <p>“It got nice collection, very much impressed and love to visit and buy again from here.” – Surya Surya</p>
+        </div>
+    </section>
 
-  <section id="products" class="products">
-    <h2>What We Offer</h2>
-    <div class="product">Sarees Collection</div>
-    <div class="product">Dress Materials</div>
-    <div class="product">KidsWear</div>
-    <div class="product">Handloom Specials</div>
-    <div class="product">Men's Traditional Wear</div>
-  </section>
-
-  <section id="testimonials">
-    <h2>What Our Customers Say</h2>
-    <blockquote>"Very good collection at affordable prices!" – Maddi Jithendra</blockquote>
-    <blockquote>"Good, I am satisfied with my needs." – Rahul K</blockquote>
-  </section>
-
-  <section id="feedback">
-    <h2>Give Us Your Feedback</h2>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSebUoMnIvUCTvK94Iisiqk4TIskesocztzowhHCnpTFIlJN-g/viewform?embedded=true" width="640" height="841" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p><i class="fa-solid fa-phone"></i> 📞 9492324225 / 9490481708</p>
-    <p><i class="fa-solid fa-envelope"></i> <a href="mailto:hemaavathifashions@gmail.com">hemaavathifashions@gmail.com</a></p>
-    <p><i class="fa-solid fa-location-dot"></i> <a href="https://maps.app.goo.gl/n5HD1Q3gdGd8jiJs5" target="_blank">Madanapalli Road, Kadiri – 515591</a></p>
-    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/919492324225" target="_blank" title="Chat with us">Chat with us on WhatsApp</a></p>
-
-    <h3>Leave a Suggestion</h3>
-    <textarea id="suggestion" rows="4" cols="50" placeholder="Write your suggestion here..."></textarea><br>
-    <a href="#" onclick="sendToWhatsApp()" style="color:#2b2d42; font-weight:bold;">Send</a>
-  </section>
-
-  <footer>
-    <p>Follow Us:</p>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/hemaavathi__fashions?igsh=MThidXh4aHRjYW5lZw%3D%3D&utm_source=qr" target="_blank" title="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://www.facebook.com/share/167a5Bk4gp/?mibextid=wwXIfr" target="_blank" title="Facebook">
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://www.youtube.com/@Hemaavathifashions" target="_blank" title="YouTube">
-        <i class="fab fa-youtube"></i>
-      </a>
-    </div>
-    <p>© 2025 Hemaavathi Fashions. All rights reserved.</p>
-  </footer>
-
-  <a href="https://wa.me/919492324225" class="floating-whatsapp" title="Chat with us">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  <a href="https://maps.app.goo.gl/n5HD1Q3gdGd8jiJs5" class="floating-call">Directions</a>
-
-  <script>
-    function sendToWhatsApp() {
-      var message = document.getElementById("suggestion").value;
-      if (message.trim() !== "") {
-        var url = "https://wa.me/919492324225?text=" + encodeURIComponent(message);
-        window.open(url, '_blank');
-      } else {
-        alert("Please enter a suggestion.");
-      }
-    }
-  </script>
+    <footer>
+        <p><strong>Business Hours:</strong> 10:00 AM to 7:00 PM</p>
+        <p>
+            <a href="https://www.google.com/maps/place/Hemaavathi+fashions/@14.086518,78.1619702,804m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3bb3cf2aac0f46b3:0xbf9ec5b155dcb627!8m2!3d14.0865128!4d78.1645451!16s%2Fg%2F11wb0_nqkc?entry=ttu" target="_blank">📍 Find us on Google Maps</a>
+        </p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61574970737394" target="_blank">Facebook</a> |
+            <a href="https://www.instagram.com/hemaavathi__fashions" target="_blank">Instagram</a> |
+            <a href="https://www.youtube.com/@Hemaavathifashions" target="_blank">YouTube</a>
+        </div>
+    </footer>
 </body>
-
 </html>
