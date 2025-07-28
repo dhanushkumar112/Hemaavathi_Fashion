@@ -1,211 +1,57 @@
+
 body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #222;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fffdf7;
+    color: #333;
 }
-
-/* Header */
 header {
-  background-color: #003366;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-}
-
-.logo-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.logo {
-  height: 60px;
-  width: auto;
-}
-
-nav {
-  margin-top: 0.5rem;
-}
-
-nav a {
-  margin: 0 1rem;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #ffcc00;
-}
-
-/* Hero Section */
-.hero {
-  background-color: #e6f0ff;
-  padding: 2rem;
-  text-align: center;
-}
-
-.hero .btn {
-  display: inline-block;
-  margin: 1rem 1rem 0;
-  padding: 0.7rem 1.5rem;
-  background-color: #003366;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: 0.3s ease;
-}
-
-.hero .btn:hover {
-  background-color: #0055aa;
-  box-shadow: 0 0 10px #0055aa;
-  transform: scale(1.05);
-}
-
-/* Sections */
-section {
-  padding: 2rem;
-  max-width: 800px;
-  margin: auto;
-}
-
-section h2 {
-  color: #003366;
-  margin-bottom: 1rem;
-}
-
-section h3 {
-  color: #003366;
-}
-
-.products .product {
-  margin: 1rem auto;
-  padding: 1rem;
-  max-width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: white;
-  text-align: center;
-  transition: 0.3s ease;
-}
-
-.products .product:hover {
-  background-color: #f0f8ff;
-  transform: scale(1.03);
-}
-
-/* Testimonials */
-#testimonials blockquote {
-  font-style: italic;
-  border-left: 4px solid #003366;
-  padding-left: 1rem;
-  margin: 1rem auto;
-  max-width: 600px;
-  color: #333;
-}
-
-/* Social Icons */
-.social-icons {
-  margin-top: 0.5rem;
-}
-
-.social-icons a {
-  margin: 0 10px;
-  color: #ffffff;
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #ff6600;
-}
-
-/* Footer */
-footer {
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
-
-/* Floating Buttons */
-.floating-whatsapp {
-  position: fixed;
-  bottom: 90px;
-  right: 20px;
-  background-color: #25d366;
-  color: white;
-  padding: 12px;
-  border-radius: 50%;
-  font-size: 24px;
-  z-index: 100;
-}
-
-.floating-call {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #2b2d42;
-  color: white;
-  padding: 12px 16px;
-  border-radius: 30px;
-  font-weight: bold;
-  z-index: 100;
-  text-decoration: none;
-}
-
-/* Animations */
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 2s ease forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-.slide-in {
-  opacity: 0;
-  transform: translateY(50px);
-  animation: slideUp 1.5s ease forwards;
-}
-
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  header, nav, .logo-nav {
-    flex-direction: column;
-    align-items: center;
+    background-color: #f2e8dc;
+    padding: 20px;
     text-align: center;
-  }
-
-  nav a {
-    display: block;
-    margin: 0.5rem 0;
-  }
-
-  .hero, section {
-    padding: 1rem;
-  }
-
-  .products .product {
-    max-width: 90%;
-  }
-
-  iframe {
-    width: 100%;
-  }
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.products, .testimonials {
+    padding: 30px;
+    text-align: center;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+.product-card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.product-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.testimonial-carousel p {
+    background: #f9f9f9;
+    margin: 10px auto;
+    padding: 15px;
+    border-left: 5px solid #e0b984;
+    max-width: 600px;
+    border-radius: 8px;
+}
+footer {
+    background-color: #f2e8dc;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+footer a {
+    color: #444;
+    text-decoration: none;
+    margin: 0 5px;
+}
+footer a:hover {
+    text-decoration: underline;
 }
