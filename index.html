@@ -1,64 +1,93 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hemaavathi Fashions</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hemaavathi Fashions</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="assets/logo.png" alt="Hemaavathi Fashions Logo" class="logo">
-        </div>
-        <h1>Hemaavathi Fashions</h1>
-    </header>
 
-    <section class="about">
-        <h2>About Us</h2>
-        <p>We bring elegance to tradition with premium sarees, dresses, and handloom wear for everyone.</p>
-    </section>
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <img src="assets/logo.png" alt="Hemaavathi Fashions Logo" class="logo"/>
+      <h1>Hemaavathi Fashions</h1>
+    </div>
+  </header>
 
-    <section class="collections">
-        <h2>Our Collections</h2>
-        <select onchange="filterProducts(this.value)">
-            <option value="all">All</option>
-            <option value="sarees">Sarees</option>
-            <option value="dresses">Dresses</option>
-            <option value="kids">Kids Wear</option>
-        </select>
-        <div id="product-list">
-            <div class="product" data-category="sarees">Saree 1</div>
-            <div class="product" data-category="dresses">Dress 1</div>
-            <div class="product" data-category="kids">Kids Wear 1</div>
-        </div>
-    </section>
+  <!-- About -->
+  <section class="section about">
+    <h2>About Us</h2>
+    <p>Welcome to Hemaavathi Fashions – a blend of tradition and trend. We offer sarees, dresses, handlooms, kids wear, and more.</p>
+  </section>
 
-    <section class="feedback">
-        <h2>Feedback</h2>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSebUoMnIvUCTvK94Iisiqk4TIskesocztzowhHCnpTFIlJN-g/viewform?embedded=true"
+  <!-- Our Collections -->
+  <section class="section collections">
+    <h2>Our Collections</h2>
+    <select onchange="filterProducts(this.value)">
+      <option value="all">All Categories</option>
+      <option value="sarees">Sarees</option>
+      <option value="dresses">Dresses</option>
+      <option value="handlooms">Handlooms</option>
+      <option value="kids">Kids Wear</option>
+      <option value="men">Men’s Wear</option>
+    </select>
+    <div id="product-list" class="product-grid">
+      <!-- Add your product cards here -->
+      <div class="product-card sarees">Beautiful Saree</div>
+      <div class="product-card dresses">Trendy Dress</div>
+      <div class="product-card handlooms">Handloom Kurta</div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact">
+    <h2>Contact Us</h2>
+    <p>📍 D.No:7/28, Kowlepalli, Kadiri-515591, Andhra Pradesh<br>
+       📞 9492324225<br>
+       ✉️ hemaavathifashions@gmail.com</p>
+
+    <div class="social-icons">
+      <a href="https://www.instagram.com/hemaavathi__fashions?igsh=MThidXh4aHRjYW5lZw%3D%3D" target="_blank">
+        <img src="assets/instagram.png" alt="Instagram"/>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61574970737394" target="_blank">
+        <img src="assets/facebook.png" alt="Facebook"/>
+      </a>
+      <a href="https://www.youtube.com/@Hemaavathifashions" target="_blank">
+        <img src="assets/youtube.png" alt="YouTube"/>
+      </a>
+      <a href="https://wa.me/919492324225" target="_blank">
+        <img src="assets/whatsapp.png" alt="WhatsApp"/>
+      </a>
+      <a href="https://www.google.com/maps/place/Hemaavathi+fashions/@14.0865128,78.1645451,804m" target="_blank">
+        <img src="assets/maps.png" alt="Maps"/>
+      </a>
+      <a href="mailto:hemaavathifashions@gmail.com">
+        <img src="assets/mail.png" alt="Mail"/>
+      </a>
+    </div>
+  </section>
+
+  <!-- Feedback Form -->
+  <section class="section feedback">
+    <h2>Feedback</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSebUoMnIvUCTvK94Iisiqk4TIskesocztzowhHCnpTFIlJN-g/viewform?embedded=true"
             width="100%" height="841" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </section>
+  </section>
 
-    <section class="contact">
-        <h2>Contact Us</h2>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/hemaavathi__fashions?igsh=MThidXh4aHRjYW5lZw%3D%3D" target="_blank"><img src="assets/instagram.png" alt="Instagram"></a>
-            <a href="https://www.facebook.com/profile.php?id=61574970737394" target="_blank"><img src="assets/facebook.png" alt="Facebook"></a>
-            <a href="https://www.youtube.com/@Hemaavathifashions" target="_blank"><img src="assets/youtube.png" alt="YouTube"></a>
-            <a href="https://wa.me/9492324225" target="_blank"><img src="assets/whatsapp.png" alt="WhatsApp"></a>
-            <a href="https://www.google.com/maps/place/Hemaavathi+fashions/@14.0865128,78.1645451,804m" target="_blank"><img src="assets/maps.png" alt="Maps"></a>
-        </div>
-    </section>
-
-    <script>
-        function filterProducts(category) {
-            const products = document.querySelectorAll('.product');
-            products.forEach(p => {
-                p.style.display = (category === 'all' || p.dataset.category === category) ? 'block' : 'none';
-            });
-        }
-    </script>
 </body>
+<script>
+  function filterProducts(category) {
+    const cards = document.querySelectorAll('.product-card');
+    cards.forEach(card => {
+      if (category === 'all' || card.classList.contains(category)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+</script>
 </html>
